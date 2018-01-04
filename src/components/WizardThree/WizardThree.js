@@ -7,7 +7,7 @@ import {updateProp} from '../../ducks/reducer';
 class WizardThree extends Component {
     render(){
         const {updateProp} = this.props;
-        console.log(`Proptobeusedon: ${this.props.propToBeUsedOn}`);
+        console.log(`PropToBeUsedOn: ${this.props.propertyType}`);
         return(
             <div className="parent-div">
                 <div className="vert-align">
@@ -24,10 +24,8 @@ class WizardThree extends Component {
 }
 
 function mapStateToProp(state){
-    const {propToBeUsedOn} = state;
-    return{
-        propToBeUsedOn
-    }
+    const {propertyType} = state;
+    return{propertyType};
 }
 
 export default connect(mapStateToProp, {updateProp})(WizardThree); 

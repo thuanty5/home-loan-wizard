@@ -7,9 +7,8 @@ class Finish extends Component {
         return(
             <div className="parent-div">
                 <div className="vert-align">
-                    <p>Thank you for choosing Home Loan Wizard, a representative will be in touch with you shortly to talk about further steps.</p> <br />
-               
-                
+                    <p>Thank you for choosing Home Loan Wizard, a representative will be in touch with you shortly to talk about further steps.</p> 
+                    <br />
                     <Link to="/"><button className="margin-btn"> Home </button></Link>
                 </div>
             </div>

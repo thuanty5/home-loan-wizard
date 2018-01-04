@@ -12,6 +12,7 @@ import WizardEight from './components/WizardEight/WizardEight';
 import WizardNine from './components/WizardNine/WizardNine';
 import WizardTen from './components/WizardTen/WizardTen';
 import WizardEleven from './components/WizardEleven/WizardEleven';
+
 import Finish from './components/Finish/Finish';
 import NextBtn from './components/NextBtn/NextBtn';
 
@@ -30,9 +31,7 @@ export default (
             <Route path='/wNine' component={WizardNine} />
             <Route path='/wTen' component={WizardTen} />
             <Route path='/wEleven' component={WizardEleven} />
+            <Route path='/finish' component={Finish} />
         </div>
     </Router>
 )
-
-
- 

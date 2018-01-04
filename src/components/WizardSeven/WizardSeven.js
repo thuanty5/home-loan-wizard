@@ -1,6 +1,7 @@
 import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+
 import {updateCredit} from '../../ducks/reducer';
 
 class WizardSeven extends Component {
@@ -8,7 +9,6 @@ class WizardSeven extends Component {
     render(){
         const {updateCredit} = this.props;
         console.log(`Credit: ${this.props.credit}`)
-        console.log(this.props);
         return(
             <div className="parent-div">
                 <div className="vert-align">                    
@@ -29,9 +29,7 @@ class WizardSeven extends Component {
 
 function mapStateToProps(state){
     const {credit} = state;
-    return{
-        credit
-    }
+    return{credit};
 }
 
 export default connect(mapStateToProps, {updateCredit})(WizardSeven);

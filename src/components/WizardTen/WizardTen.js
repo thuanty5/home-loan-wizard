@@ -1,11 +1,12 @@
 import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
-import {updateFName,updateLName,updateEmail} from '../../ducks/reducer';
+
+import {updateFName, updateLName, updateEmail} from '../../ducks/reducer';
 
 class WizardTen extends Component {
     render(){
-        const {updateFName,updateLName,updateEmail} = this.props;
+        const {updateFName, updateLName, updateEmail} = this.props;
         console.log(`fName: ${this.props.firstName} lName: ${this.props.lastName} email: ${this.props.email}`)
         return(
             <div className="parent-div">
@@ -26,11 +27,7 @@ class WizardTen extends Component {
 
 function mapStateToProps(state){
     const {firstName,lastName,email} = state;
-    return{
-        firstName,
-        lastName,
-        email
-    }
+    return{firstName, lastName, email};
 }
 
 export default connect(mapStateToProps, {updateFName,updateLName,updateEmail})(WizardTen);

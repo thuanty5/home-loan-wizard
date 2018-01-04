@@ -1,6 +1,7 @@
 import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+
 import {updateHistory} from '../../ducks/reducer';
 
 class WizardEight extends Component {
@@ -26,9 +27,7 @@ class WizardEight extends Component {
 
 function mapStateToProps(state){
     const {history} = state;
-    return{
-        history
-    }
+    return{history};
 }
 
 export default connect(mapStateToProps, {updateHistory})(WizardEight);

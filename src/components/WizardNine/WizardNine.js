@@ -1,12 +1,13 @@
 import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+
 import {updateAddress1, updateAddress2, updateAddress3} from '../../ducks/reducer';
 
 class WizardNine extends Component {
 
     render(){
-        const {updateAddress1,updateAddress2,updateAddress3} = this.props;
+        const {updateAddress1, updateAddress2, updateAddress3} = this.props;
         console.log(`addr1: ${this.props.addressOne} addr2: ${this.props.addressTwo} addr3: ${this.props.addressThree}`)
         return(
             <div className="parent-div">
@@ -28,11 +29,7 @@ class WizardNine extends Component {
 
 function mapStateToProps(state){
     const {addressOne,addressTwo,addressThree} = state;
-    return{
-        addressOne,
-        addressTwo,
-        addressThree
-    }
+    return{addressOne, addressTwo, addressThree};
 }
 
-export default connect(mapStateToProps, {updateAddress1,updateAddress2,updateAddress3})(WizardNine);
+export default connect(mapStateToProps, {updateAddress1, updateAddress2, updateAddress3})(WizardNine);
